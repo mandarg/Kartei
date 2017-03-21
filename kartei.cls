@@ -364,7 +364,7 @@
 %
 %
 % Init
-\antwort{Antwort}
+\antwort{Answer}
 \pagestyle{scrheadings}
 \clearscrheadings
 \lohead{Kartentitel}

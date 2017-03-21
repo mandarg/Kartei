@@ -1,0 +1,90 @@
+%
+%    * ----------------------------------------------------------------
+%    * "THE BEER-WARE LICENSE" (Revision 42/023):
+%    * Ronny Bergmann <mail@rbergmann.info> wrote this file. As long as
+%    * you retain this notice you can do whatever you want with this
+%    * stuff. If we meet some day and you think this stuff is worth it,
+%    * you can buy me a beer or a coffee in return.
+%    * ----------------------------------------------------------------
+%
+%
+% Kartei Source Code of the german manual
+%
+% Last Change: Kartei 1.9, 2012/01/04
+%
+\documentclass[a4paper,DIV=calc]{scrartcl}
+\usepackage[utf8]{inputenc} %UTF8
+\usepackage[OT1]{fontenc}
+%\usepackage[scaled]{helvet}
+
+% A bunch of packages mainly useful for mathematics and informatics
+\usepackage{graphicx,hyperref}
+\usepackage{enumerate,subfigure,listings}
+\usepackage{pdfpages,color}
+%\usepackage[pdftex,dvipsnames]{xcolor}
+%\usepackage[light]{kpfonts}
+
+% \lstloadlanguages{TeX}
+\lstset{basicstyle={\rmfamily\footnotesize},numbers=left,numberstyle=\tiny\color{maincolor},numbersep=5pt, breaklines=true, captionpos={t},language={},frame=none,numbers=left,tabsize=3, showspaces=false, showtabs=false, columns=fixed}
+\setlength{\parindent}{1em}
+\setlength{\parskip}{0em}
+\setlength{\marginparwidth}{3cm}
+\colorlet{maincolor}{black!80}
+
+\hypersetup{
+   pdftitle={Flashcards in LaTeX}%
+	  ,pdfauthor={Ronny Bergmann, Mandar Gokhale}%
+	  ,pdfcreator={LaTeX, hyperref, KOMA-Script, TextMate},
+   pdfkeywords={Cards, Karteikarten, TeX, Paket, Anleitung, Manual},
+   pdfdisplaydoctitle,
+   bookmarksnumbered=true,
+   bookmarksopen=true,
+   bookmarksopenlevel=1,
+   plainpages=false,
+   bookmarksnumbered,
+   pdfborder={0 0 0}
+   }
+
+\addtokomafont{sectioning}{\rmfamily}
+\setkomafont{descriptionlabel}{\rmfamily\bfseries}
+\newcommand{\befehl}[1]{%
+\marginpar{\footnotesize\textsf{#1}}%
+}
+
+\begin{document}
+\title{Flashcards in \LaTeX\\{\large Version 1.9}}
+\author{Ronny Bergmann, Mandar Gokhale\\\emph{mail@rbergmann.info, mandarg@mandarg.com}}
+
+\date{\today}
+\maketitle
+\section{Introduction}
+
+Flashcards are helpful for learning, either in a small format for
+vocabulary or in larger formats for more extensive topics. They can be
+either viewed on the computer for revision, or printed. For this
+purpose, a number of flashcards are placed on one page, while their
+backs are printed on the next, so that if they are printed in duplex
+format, the appropriate front and back pages for each card are printed
+correctly on opposite sides of the paper. Both formats are based on
+the same content, so \LaTeX\ can help to produce both of these
+formats.
+
+
+For testing, it is fine to put the file for the flashcards in the same
+directory as the main class file. For more extensive projects, we
+recommend putting should put the class files in a special folder:
+(\lstinline!/texmf-dist/tex/latex/kartei)!, followed by running
+\lstinline!sudo texhash!.
+
+\section{Document Options}
+
+\section{The Cards}
+
+\section{Technical Details}
+
+\section{License}
+
+\section{Changelog}
+
+\end{description}
+\end{document}
