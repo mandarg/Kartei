@@ -33,7 +33,7 @@
 
 \hypersetup{
    pdftitle={Flashcards in LaTeX}%
-	  ,pdfauthor={Ronny Bergmann, Mandar Gokhale}%
+	  ,pdfauthor={Ronny Bergmann}%
 	  ,pdfcreator={LaTeX, hyperref, KOMA-Script, TextMate},
    pdfkeywords={Cards, Karteikarten, TeX, Paket, Anleitung, Manual},
    pdfdisplaydoctitle,
@@ -53,7 +53,7 @@
 
 \begin{document}
 \title{Flashcards in \LaTeX\\{\large Version 1.9}}
-\author{Ronny Bergmann, Mandar Gokhale\\\emph{mail@rbergmann.info, mandarg@mandarg.com}}
+\author{Ronny Bergmann\\\emph{mail@rbergmann.info}\footnote{English translation by Mandar Gokhale}}
 
 \date{\today}
 \maketitle
@@ -76,9 +76,22 @@ recommend putting should put the class files in a special folder:
 (\lstinline!/texmf-dist/tex/latex/kartei)!, followed by running
 \lstinline!sudo texhash!.
 
-\section{Document Options}
-
+\subsection{Document Options}
+For a set of flashcards \befehl{\textbackslash document-\\class\{kartei\}},
+you can set the standard options for an article, for example the font size.
+If unspecified, the font size is set to approximately \lstinline!10pt!.
+  
 \section{The Cards}
+\befehl{aXpaper}
+These are the following formats in which cards can be made:
+\begin{description}
+  \item[a5paper] Flashcards in DIN-A5-Format $(210$mm$\times 148$mm$)$\footnote{Thanks to M. Wolf for the idea}
+  \item[a6paper] In DIN-A6-Karteikarten-Format $(148$mm$\times 105$mm$)$ the margins are slightly larger than in the other two formats. This format is the default if no format is specified.
+  \item[a7paper] DIN-A7-Karteikarten $(105$mm$\times 74$mm$)$
+  \item[a8paper] DIN-A8-Karteikarten $(74$mm$\times 52$mm$)$, from here onwards you should set the font
+    smaller than 10pt.
+  \item[a9paper] DIN-A9-Karteikarten $(52$mm$\times 37$mm$)$\footnote{Thanks H. Fritsch for the patch}  
+\end{description}
 
 \section{Technical Details}
 
@@ -86,5 +99,4 @@ recommend putting should put the class files in a special folder:
 
 \section{Changelog}
 
-\end{description}
 \end{document}
